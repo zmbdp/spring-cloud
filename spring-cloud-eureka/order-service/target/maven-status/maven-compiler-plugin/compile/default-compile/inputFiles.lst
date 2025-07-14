@@ -1,0 +1,8 @@
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\OrderServiceApplication.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\controller\OrderController.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\mapper\OrderMapper.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\config\BeanConfig.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\service\OrderService.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\config\CustomLoadBalancerConfiguration.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\model\OrderInfo.java
+C:\spring-cloud\spring-cloud-eureka\order-service\src\main\java\com\zmbdp\order\model\ProductInfo.java

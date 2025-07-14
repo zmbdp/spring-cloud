@@ -1,0 +1,16 @@
+server:
+  port: 10010
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false # 表示是否从 Eureka Server获取注册信息，默认为 true。因为这是⼀个单点的 Eureka Server，不需要同步其他的Eureka Server节点的数据，这里设置为false
+    register-with-eureka: false # 表示是否将自己注册到 Eureka Server，默认为 true.由于当前应用就是 Eureka Server，故而设置为 false。
+    service-url:
+      # 设置 Eureka Server 的地址，查询服务和注册服务都需要依赖这个地址。
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
