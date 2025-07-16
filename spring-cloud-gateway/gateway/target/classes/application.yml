@@ -1,0 +1,16 @@
+server:
+  port: 10030
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order/** # 匹配条件，如果说达到/order/** 这样的一个路径，就会转发到 order-service 服务
