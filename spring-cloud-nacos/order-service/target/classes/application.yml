@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cloud_order?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456 # 服务器是Hf@173503494
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    loadbalancer:
+      nacos:
+        enabled: true # 开启 Nacos 负载均衡
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 # Nacos 地址 和 端口 服务器ip是 150.158.121.42/
+        cluster-name: SH # Nacos 集群名称
+
+mybatis:
+  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印 MyBatis 日志
+    map-underscore-to-camel-case: true # 配置驼峰自动转换
