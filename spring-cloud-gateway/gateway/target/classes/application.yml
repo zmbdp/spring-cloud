@@ -10,7 +10,7 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
-        - id: order-service
-          uri: lb://order-service
+        - id: order-service # 路由 id 随便起，只要不重复就刑
+          uri: lb://order-service # 目标服务地址
           predicates:
-            - Path=/order/** # 匹配条件，如果说达到/order/** 这样的一个路径，就会转发到 order-service 服务
+            - Path=/order/** # 匹配条件，如果说满足 /order/** 这样的一个路径，就会转发到目标服务地址上
