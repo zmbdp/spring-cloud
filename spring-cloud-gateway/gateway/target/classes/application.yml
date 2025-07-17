@@ -9,8 +9,27 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
     gateway:
+      metrics:
+        enabled: true # 开启监控
       routes:
         - id: order-service # 路由 id 随便起，只要不重复就刑
           uri: lb://order-service # 目标服务地址
           predicates:
             - Path=/order/** # 匹配条件，如果说满足 /order/** 这样的一个路径，就会转发到目标服务地址上
+          filters:
+            - name: Custom # 自定义过滤器的名称必须是 GatewayFilterFactory 的前缀
+              args: # 配置参数
+                id: 21
+                name: 付豪
+
+# 监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 选取所有端点
+  endpoint:
+    health:
+      show-details: always # 显示健康检查详情
+    shutdown:
+      enabled: true # 允许关闭
