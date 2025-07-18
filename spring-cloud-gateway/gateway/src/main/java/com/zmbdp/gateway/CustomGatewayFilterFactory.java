@@ -49,6 +49,6 @@ public class CustomGatewayFilterFactory extends AbstractGatewayFilterFactory<Cus
 
     @Override
     public int getOrder() {
-        return -200;
+        return 2;
     }
 }
